@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/Widget.AppCompat.Button.Colored"/>
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -30,7 +30,8 @@
         app:helperText="Al menos 8 caracteres"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/btnLogin">
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -40,15 +41,25 @@
 
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etName"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:inputType="textPersonName"
+        android:hint="Name"
+        app:endIconMode="clear_text"
+        app:helperText="Nombre y apellido"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/etPassword"/>
+        app:layout_constraintBottom_toBottomOf="@id/etPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:layout_width="wrap_content"

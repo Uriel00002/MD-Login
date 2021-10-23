@@ -12,23 +12,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Iniciar Sesion"
-        android:background="@color/colorAccent"
-        android:textColor="@android:color/white"
         android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.AppCompat.Button.Colored"/>
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPassword"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:inputType="textPassword"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:helperText="Al menos 8 caracteres"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/btnLogin"/>
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <EditText
         android:id="@+id/etName"
